@@ -1,156 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f2f4f7;
-        }
-
-        .form-container {
-            width: 400px;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #333;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-weight: bold;
-            color: #444;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 15px;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #007bff;
-        }
-
-        .terms {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-
-        .terms input {
-            width: auto;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            background: #007bff;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #0056b3;
-        }
-
-        .login {
-            text-align: center;
-            margin-top: 18px;
-            font-size: 14px;
-        }
-
-        .login a {
-            color: #007bff;
-            text-decoration: none;
-        }
-    </style>
+    <title>Simple Registration Form</title>
 </head>
-
 <body>
 
-    <div class="form-container">
-        <h2>Create Account</h2>
+    <h2>Registration Form</h2>
 
-        <form action="#" method="POST">
+    <form action="#" method="post">
 
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname"
-                       placeholder="Enter your full name" required>
-            </div>
+        <label>Full Name:</label><br>
+        <input type="text" name="fullname" required><br><br>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email"
-                       placeholder="Enter your email" required>
-            </div>
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
 
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone"
-                       placeholder="Enter your phone number" required>
-            </div>
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password"
-                       placeholder="Create a password" required>
-            </div>
+        <label>Confirm Password:</label><br>
+        <input type="password" name="confirm_password" required><br><br>
 
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password"
-                       name="confirm_password"
-                       placeholder="Confirm your password" required>
-            </div>
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
 
-            <div class="terms">
-                <input type="checkbox" id="terms" required>
-                <label for="terms">I agree to the Terms & Conditions</label>
-            </div>
+        <label>Date of Birth:</label><br>
+        <input type="date" name="dob"><br><br>
 
-            <button type="submit">Register</button>
+        <label>Phone Number:</label><br>
+        <input type="tel" name="phone"><br><br>
 
-            <div class="login">
-                Already have an account?
-                <a href="#">Login</a>
-            </div>
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
 
-        </form>
-    </div>
+    </form>
 
 </body>
 </html>
